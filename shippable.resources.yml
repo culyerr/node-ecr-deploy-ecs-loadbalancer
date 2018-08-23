@@ -7,7 +7,7 @@ resources:
 # add env - AWS cluster
   - name: shipdemo-cluster-ecs
     type: cluster
-    integration: AWSShippable # replace with your AWS integration name
+    integration: arn:aws:ecr:eu-west-1:403022011011:repository/shippabletest # replace with your AWS integration name
     pointer:
       # replace with your Amazon ECS cluster name and region
       sourceName : "rfc-test-1"
