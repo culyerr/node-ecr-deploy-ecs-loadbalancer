@@ -10,8 +10,8 @@ resources:
     integration: ttrahan-aws # replace with your AWS integration name
     pointer:
       # replace with your Amazon ECS cluster name and region
-      sourceName : "demo-shippable-ecs-test"
-      region: "us-east-1"
+      sourceName : "rfc-test-1"
+      region: "eu-west-1"
     flags:
       - amazon-ecr-ecs-loadbalancer
 
@@ -20,7 +20,7 @@ resources:
     type: loadBalancer      #required
     pointer:
       # replace with the ARN for your Amazon EC/2 Application Load Balancer Target Group
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:288971733297:targetgroup/demoWebTest/56a74253de7101ee"
+      sourceName: "arn:aws:elasticloadbalancing:eu-west-1:403022011011:loadbalancer/app/EC2Co-EcsEl-1JCVJI86U3U6C/9d56363a32eb920d"
       method: application
     flags:
       - amazon-ecr-ecs-loadbalancer
@@ -30,7 +30,7 @@ resources:
     type: loadBalancer      #required
     pointer:
       # replace with the ARN for your Amazon EC/2 Application Load Balancer Target Group
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:288971733297:targetgroup/demoWeb/29435cb0f31ac400"
+      sourceName: "arn:aws:elasticloadbalancing:eu-west-1:403022011011:loadbalancer/app/EC2Co-EcsEl-1HKURM4DR6U15/6384a2fdde115f10"
       method: application
     flags:
       - amazon-ecr-ecs-loadbalancer
@@ -43,7 +43,7 @@ resources:
     integration: ttrahan-ecr # replace with your Amazon ECR integration name
     pointer:
       # replace with your Amazon ECR URL
-      sourceName: "288971733297.dkr.ecr.us-east-1.amazonaws.com/node-ecr-deploy-ecs-loadbalancer" 
+      sourceName: "403022011011.dkr.ecr.eu-west-1.amazonaws.com/shippabletest" 
       isPull: false
     seed:
       versionName: master.1
