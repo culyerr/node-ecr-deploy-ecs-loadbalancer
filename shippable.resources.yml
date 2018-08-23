@@ -7,7 +7,7 @@ resources:
 # add env - AWS cluster
   - name: shipdemo-cluster-ecs
     type: cluster
-    integration: ttrahan-aws # replace with your AWS integration name
+    integration: AWSShippable # replace with your AWS integration name
     pointer:
       # replace with your Amazon ECS cluster name and region
       sourceName : "rfc-test-1"
