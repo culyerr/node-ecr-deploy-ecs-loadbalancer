@@ -45,6 +45,7 @@ integrations:
 # http://docs.shippable.com/integrations/imageRegistries/dockerHub/
   hub:
     - integrationName: AWS_ECR # replace with your Amazon ECR integration name
+      region: eu-west-1
       type: ecr
 
   # http://docs.shippable.com/ci/shippableyml/#notifications
